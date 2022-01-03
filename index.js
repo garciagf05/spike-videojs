@@ -21,11 +21,12 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.listen(port);
+app.use(express.static(path.join(__dirname, '/public')));
+
 console.log('Server started at http://localhost:' + port);
