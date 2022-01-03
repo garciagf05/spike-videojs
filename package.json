@@ -1,0 +1,20 @@
+{
+  "name": "spike-videojs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "path": "^0.12.7",
+    "video.js": "^7.17.0",
+    "videojs-contrib-ads": "^6.9.0",
+    "videojs-ima": "^1.11.0"
+  }
+}

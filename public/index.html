@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Load dependent stylesheets. -->
+  <link href="/index.css" rel="stylesheet">
+  <link href="/video.js/dist/video-js.css" rel="stylesheet">
+  <link rel="stylesheet" href="/videojs-contrib-ads/dist/videojs-contrib-ads.css" />
+  <link rel="stylesheet" href="/videojs-ima/src/css/videojs.ima.css" />
+</head>
+
+<body>
+  <div id="content-box">
+    <div id="player-container">
+      <video id="content_video" class="video-js vjs-default-skin" controls preload="auto" width="560" height="480">
+        <source src="/my_video.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div id="form-container">
+      <h2 id="disclaimer">The ima plugin only allows one for each kind of ad to be loaded per player instance. To change the url of the ads or replay the pre-roll it is necessary to reload the page.</h2>
+      <input id="videoUrl" type="url" placeholder="Paste your video url"/>
+      <input id="adUrl" type="url" placeholder="Paste your add url"/>
+      <button onclick="setExampleValues()">SET EXAMPLE VALUES</button>
+      <button onclick="setPlayerUrls()">LOAD ON PLAYER</button>
+      <input id="fetchUrl" type="url" placeholder="Paste video url to fetch"/>
+      <input id="jwt" type="url" placeholder="Paste JWT token here"/>
+      <button onclick="fetchAndLoadOnPlayer()">FETCH AND LOAD ON PLAYER</button>
+    </div>
+  </div>
+  <!-- Load dependent scripts -->
+  <script src="/video.js/dist/video.min.js"></script>
+  <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+  <script src="/videojs-contrib-ads/dist/videojs-contrib-ads.min.js"></script>
+  <script src="/videojs-ima/dist/videojs.ima.min.js"></script>
+  <script src="/player.js"></script>
+</body>
+
+</html>
